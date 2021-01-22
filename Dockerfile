@@ -51,4 +51,6 @@ LABEL org.label-schema.schema-version="1.0"
 LABEL org.label-schema.name=frontend
 LABEL org.label-schema.description="Test react frontend"
 
+EXPOSE 80
+
 COPY --from=production /data/app/build /usr/share/nginx/html
