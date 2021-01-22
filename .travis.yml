@@ -1,0 +1,10 @@
+# sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build -t jllacuna/frontend --target development .
+
+script:
+  - docker run -e CI=true jllacuna/frontend yarn test
