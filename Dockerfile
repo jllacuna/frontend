@@ -17,7 +17,7 @@ COPY package*.json yarn.lock /data/
 
 RUN cd /data && NODE_ENV=production npm install
 
-COPY . .
+COPY . ./
 RUN rm -fr node_modules build
 RUN npm run build
 
