@@ -15,7 +15,7 @@ WORKDIR $APP_PATH
 # Cache node modules in /data/node_modules
 COPY package*.json yarn.lock /data/
 
-RUN cd /data && NODE_ENV=production npm install
+RUN cd /data && npm install
 
 COPY . .
 RUN rm -fr node_modules build
