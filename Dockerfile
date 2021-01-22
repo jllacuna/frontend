@@ -34,7 +34,7 @@ CMD [ "yarn", "start" ]
 # PRODUCTION build
 # ----------------
 
-FROM base AS production
+FROM base
 RUN cd /data && NODE_ENV=production npm install
 
 COPY . .
@@ -53,4 +53,4 @@ LABEL org.label-schema.description="Test react frontend"
 
 EXPOSE 80
 
-COPY --from=production /data/app/build /usr/share/nginx/html
+COPY --from=2 /data/app/build /usr/share/nginx/html
