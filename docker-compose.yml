@@ -5,6 +5,7 @@ services:
     build:
       context: .
       target: development
+      dockerfile: Dockerfile.dev
     environment:
       - NODE_ENV=development
     ports:
