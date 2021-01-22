@@ -12,10 +12,10 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "us-west-1"
-  app: frontend_test
-  env: "FrontendTest-env-2"
+  app: frontend
+  env: "Frontend-env"
   bucket_name: "elasticbeanstalk-us-west-1-114200142703"
-  bucket_path: frontend_test
+  bucket_path: frontend
   on:
     branch: main
   access_key_id: $AWS_ACCESS_KEY
