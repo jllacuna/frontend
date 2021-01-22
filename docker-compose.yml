@@ -4,12 +4,13 @@ services:
   frontend:
     build:
       context: .
-      target: development
-      dockerfile: Dockerfile.dev
-    environment:
-      - NODE_ENV=development
+      # target: development
+      # dockerfile: Dockerfile.dev
+    # environment:
+    #   - node_env=development
     ports:
-      - "3000:3000"
+      # - "3000:3000"
+      - "80:80"
     volumes:
       - /data/app/node_modules
       - .:/data/app
